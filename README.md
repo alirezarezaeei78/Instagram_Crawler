@@ -42,3 +42,9 @@ Review outputs before sharing them. Environment files and CSV exports are exclud
 ## Maintainer
 
 [Alireza Rezaei](https://www.linkedin.com/in/alireza-rezaei-24963a210/) — applied machine learning and web development.
+
+## Maintained entry point
+
+Copy `.env.example` to `.env` and fill in your own credentials and `TARGET_USER`. Run `python crawler.py` to start one browser session. The main notebook imports this implementation and defaults to `RUN_CRAWLER = False`, avoiding repeated logins when Run All is used. `Untitled-1.ipynb` retains callable exploratory demos and closes their drivers.
+
+Driver discovery uses [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/). Follower links are validated as Instagram profile URLs, results are sorted, scrolling is bounded, and the browser closes on failure. Run `python -m unittest discover -s tests -v` for offline URL and configuration checks. Live collection has not been tested against the current Instagram layout.

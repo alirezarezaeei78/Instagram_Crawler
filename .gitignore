@@ -5,3 +5,6 @@ __pycache__/
 .env.*
 *.env
 *.csv
+
+*.py[cod]
+!.env.example
